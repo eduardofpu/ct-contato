@@ -212,7 +212,7 @@
 
     <!--    Para setar o profile: dev ou prod  -->
     <!--    Ambiente dev: docker-compose up  mvn clean package -Pdev  -->
-    <!--    Ambidnte prod: mvn clean package -Pprod -->
+    <!--    Ambidente prod: mvn clean package -Pprod -->
     <profiles>
         <profile>
             <id>lcl</id>
