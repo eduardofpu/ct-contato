@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.com.appl.contato.controller.ContatoControllerTest
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 67.639 sec - in org.com.appl.contato.controller.ContatoControllerTest

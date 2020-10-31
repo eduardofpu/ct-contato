@@ -1,0 +1,32 @@
+2020-10-31 11:35:43.755  INFO 14382 --- [main] o.c.a.c.c.ContatoControllerTest          : Starting ContatoControllerTest on std-eduardo with PID 14382 (started by eduardo in /home/eduardo/Documentos/cursos/projetos-java/ct-contato/contato-application)
+2020-10-31 11:35:43.761  INFO 14382 --- [main] o.c.a.c.c.ContatoControllerTest          : The following profiles are active: prod
+2020-10-31 11:35:43.800  INFO 14382 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1ee5792a: startup date [Sat Oct 31 11:35:43 BRT 2020]; root of context hierarchy
+2020-10-31 11:35:45.147  INFO 14382 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8fd5e0b0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-31 11:35:54.503  INFO 14382 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-10-31 11:35:54.532  INFO 14382 --- [main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-10-31 11:35:54.636  INFO 14382 --- [main] o.h.Version                              : HHH000412: Hibernate Core {5.0.12.Final}
+2020-10-31 11:35:54.638  INFO 14382 --- [main] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2020-10-31 11:35:54.640  INFO 14382 --- [main] o.h.c.Environment                        : HHH000021: Bytecode provider name : javassist
+2020-10-31 11:35:54.706  INFO 14382 --- [main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-10-31 11:35:54.896  INFO 14382 --- [main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2020-10-31 11:36:58.656  INFO 14382 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2020-10-31 11:36:58.660  INFO 14382 --- [main] o.h.t.BasicTypeRegistry                  : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@ebbd6d8
+2020-10-31 11:36:59.226  INFO 14382 --- [main] o.h.t.h.SchemaUpdate                     : HHH000228: Running hbm2ddl schema update
+2020-10-31 11:37:01.143  INFO 14382 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-31 11:37:01.552  INFO 14382 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2020-10-31 11:37:01.553  INFO 14382 --- [main] o.s.t.w.s.TestDispatcherServlet          : FrameworkServlet '': initialization started
+2020-10-31 11:37:01.756  INFO 14382 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/contato/list],methods=[GET]}" onto org.springframework.data.domain.Page<org.com.api.contato.representation.ContatoReq> org.com.appl.contato.controller.ContatoController.findAll(org.springframework.data.domain.Pageable)
+2020-10-31 11:37:01.757  INFO 14382 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/contato/createde],methods=[POST]}" onto public org.com.api.contato.representation.ContatoResp org.com.appl.contato.controller.ContatoController.createde(org.com.api.contato.representation.ContatoReq) throws org.com.cmn.contato.exception.internalServerError
+2020-10-31 11:37:01.758  INFO 14382 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/contato/edit/{id}],methods=[PUT]}" onto public org.com.api.contato.representation.ContatoResp org.com.appl.contato.controller.ContatoController.editCustomer(java.lang.Long,org.com.api.contato.representation.ContatoReq) throws org.com.cmn.contato.exception.internalServerError
+2020-10-31 11:37:01.759  INFO 14382 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/contato/excluir/{id}],methods=[DELETE]}" onto public void org.com.appl.contato.controller.ContatoController.deleteCustomer(java.lang.Long) throws org.com.cmn.contato.exception.internalServerError
+2020-10-31 11:37:01.762  INFO 14382 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-10-31 11:37:01.763  INFO 14382 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-10-31 11:37:01.798  INFO 14382 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-10-31 11:37:01.798  INFO 14382 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-10-31 11:37:01.820  INFO 14382 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-10-31 11:37:02.102  INFO 14382 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@1ee5792a: startup date [Sat Oct 31 11:35:43 BRT 2020]; root of context hierarchy
+2020-10-31 11:37:02.198  INFO 14382 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2020-10-31 11:37:02.272  INFO 14382 --- [main] o.s.t.w.s.TestDispatcherServlet          : FrameworkServlet '': initialization completed in 719 ms
+2020-10-31 11:37:02.641  INFO 14382 --- [main] o.c.a.c.c.ContatoControllerTest          : Started ContatoControllerTest in 79.413 seconds (JVM running for 81.075)

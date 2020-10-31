@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/contatdo-interactor-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/contato-application/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/contato-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/contato-domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/contato-model/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/contato-repository/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/contato-service/src/main/java" charset="UTF-8" />
+  </component>
+</project>
