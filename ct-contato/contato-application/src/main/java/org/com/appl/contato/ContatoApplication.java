@@ -6,9 +6,12 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 /**
- * #https://pt.stackoverflow.com/questions/287187/usar-profiling-do-maven-ou-do-spring-boot
+ * 1- deploy Ec2: https://www.youtube.com/watch?v=tNi8ymBdAh4
+ *
+ * 2- deploy Elastic Beanstalk:  https://www.youtube.com/watch?v=6SadWaJrtnY
  ----------------------------------------------------------------------------------------------------------------------
- Execute o Package para prod no promp de comando:  mvn package -Prod
+ https://pt.stackoverflow.com/questions/287187/usar-profiling-do-maven-ou-do-spring-boot
+ Execute o Package para prod no promp de comando:  mvn clean package -Prod
 
  ----------------------------------------------------------------------------------------------------------------------
 Para instalar o jar na aws:
@@ -43,7 +46,7 @@ Para instalar o jar na aws:
 
  ---------------------------OUTRA OPÇÃO DE  EMPACOTAMENTO --------------------------------------------------------------
  # Ambiente dev: docker-compose up   mvn package -Pdev
- # Ambiente prod:  mvn package -Prod
+ # Ambiente prod:  mvn clean package -Prod
 
  Após o package use o comando na aws: java -jar ct-application.jar
 
