@@ -132,6 +132,6 @@ Curl GET ec2-3-138-182-18.us-east-2.compute.amazonaws.com:8080/contato/list
 ```
 #### UElastic Beanstalk
 ```
-http://cloudctcontato-env.eba-c9ppknt5.us-east-2.elasticbeanstalk.com/contato/list
+http://url do elasticbeanstalk criada na aws/contato/list
 
 ```
