@@ -52,6 +52,14 @@ Para instalar o jar na aws:
         ssh -i aw-spring-amazon-aws.pem ubuntu@ec2-3-138-182-18.us-east-2.compute.amazonaws.com
 
 ```
+## RDS
+```
+Crie um RDS na aws:
+https://www.youtube.com/watch?v=XwJQbDvkOyM
+
+https://www.youtube.com/watch?v=g3gKF_Li1WM
+
+```
 
 #### Para utilizar o Elastic Beanstalk siga:
 ```
