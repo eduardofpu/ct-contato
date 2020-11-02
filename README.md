@@ -138,7 +138,7 @@ status: 204    NO_CONTENT
 Curl GET ec2-3-138-182-18.us-east-2.compute.amazonaws.com:8080/contato/list
 
 ```
-#### UElastic Beanstalk
+#### Url Elastic Beanstalk
 ```
 http://url do elasticbeanstalk criada na aws/contato/list
 
