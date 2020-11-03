@@ -16,8 +16,7 @@
     <properties>
         <commons-io.version>2.5</commons-io.version>
         <commons-collections.version>3.2.2</commons-collections.version>
-        <commons.version>3.4</commons.version>  
-        <org.mapstruct.version>1.2.0.Final</org.mapstruct.version>
+        <commons.version>3.4</commons.version>          
     </properties>
 
 
@@ -54,27 +53,6 @@
         </dependency>
         
     </dependencies>
-
-    <build>
-                         
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.5.1</version>
-                <configuration>
-                    <source>${project.build.java}</source>
-                    <target>${project.build.java}</target>
-                    <annotationProcessorPaths>
-                        <path>
-                            <groupId>org.mapstruct</groupId>
-                            <artifactId>mapstruct-processor</artifactId>
-                            <version>${org.mapstruct.version}</version>
-                        </path>
-                    </annotationProcessorPaths>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 
 
 </project>
