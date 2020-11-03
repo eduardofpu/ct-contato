@@ -214,6 +214,12 @@
             <artifactId>javax.xml.soap-api</artifactId>
             <version>1.4.0</version>
         </dependency>
+             
+       <dependency>
+             <groupId>com.abc.def</groupId>
+                  <artifactId>foo</artifactId>
+              <scope>test</scope>
+         </dependency>      
 
     </dependencies>
 
@@ -260,20 +266,13 @@
 
         <pluginManagement>
             <plugins>
-                <plugin>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.19.1</version>
-                    <configuration>
-                        <!--Skip test case-->
-                        <skipTests>true</skipTests>
-                        <skipAfterFailureCount>1</skipAfterFailureCount>
-                        <forkCount>1</forkCount>
-                        <reuseForks>true</reuseForks>
-                        <excludes>
-                            <exclude>**/IT*.java</exclude>
-                        </excludes>
-                    </configuration>
-                </plugin>
+                <plugin>    
+        <groupId>org.apache.maven.plugins</groupId> 
+        <artifactId>maven-surefire-plugin</artifactId>  
+        <configuration>
+            <forkCount>0</forkCount>
+        </configuration>
+    </plugin>
 
                 <plugin>
                     <groupId>org.bsc.maven</groupId>
