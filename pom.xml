@@ -255,7 +255,7 @@
                 <configuration>
                     <skipTests>false</skipTests>
                     <testFailureIgnore>true</testFailureIgnore>
-                    <forkMode>once</forkMode>
+                    <forkMode>never</forkMode>
                 </configuration>   
                               
             </plugin>      
