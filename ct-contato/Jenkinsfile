@@ -1,5 +1,5 @@
 node{
-  stage('SCM Checaout'){
+  stage('SCM Checkout'){
      git 'https://github.com/eduardofpu/micro-services'
    }
      stage('Compile-Package'){
