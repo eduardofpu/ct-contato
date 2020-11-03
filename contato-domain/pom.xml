@@ -16,7 +16,8 @@
     <properties>
         <commons-io.version>2.5</commons-io.version>
         <commons-collections.version>3.2.2</commons-collections.version>
-        <commons.version>3.4</commons.version>          
+        <commons.version>3.4</commons.version>   
+        <java.version>11</java.version>     
     </properties>
 
 
