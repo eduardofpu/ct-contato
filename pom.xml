@@ -29,7 +29,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <project.build.java>1.8</project.build.java> 
+        <project.build.java>1.8</project.build.java>
         <project.build.enconding>UTF-8</project.build.enconding>
 
         <rs.version>1.1.1</rs.version>
@@ -214,13 +214,7 @@
             <artifactId>javax.xml.soap-api</artifactId>
             <version>1.4.0</version>
         </dependency>
-             
-        <dependency>
-             <groupId>junit</groupId>
-             <artifactId>junit</artifactId>
-              <version>4.12</version>
-         </dependency>     
-       
+
     </dependencies>
 
     <!--    Para setar o profile: dev ou prod  -->
@@ -263,16 +257,59 @@
             </resource>
         </resources>
 
-        <plugins>   
-                 <plugin>
-                      <artifactId>maven-surefire-plugin</artifactId>
-                      <version>2.19.1</version>                    
-                 </plugin>  
 
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.bsc.maven</groupId>
+                    <artifactId>confluence-reporting-maven-plugin</artifactId>
+                    <version>5.0</version>
+                </plugin>
+            </plugins>
+
+        </pluginManagement>
+        <plugins>
+
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.19.1</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>${project.build.java}</source>
+                    <target>${project.build.java}</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.7.7.201606060606</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 
         </plugins>
 
-    </build>        
-         
+    </build>
+
+
 
 </project>
