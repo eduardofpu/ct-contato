@@ -29,7 +29,8 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <project.build.java>1.8</project.build.java>
+        <project.build.java>1.8</project.build.java>            
+        <java.version>11</java.version>	
         <project.build.enconding>UTF-8</project.build.enconding>
 
         <rs.version>1.1.1</rs.version>
