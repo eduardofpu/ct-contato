@@ -1,9 +1,0 @@
-node{
-  stage('SCM Checkout'){
-     git 'https://github.com/eduardofpu/micro-services.git'
-   }
-     stage('Compile-Package'){
-      sh 'mvn package'
-   }
-       
-}
