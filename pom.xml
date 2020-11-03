@@ -207,6 +207,11 @@
             <version>3.25.0-GA</version>
         </dependency>
         <!--        Fim             -->
+             <dependency>
+                      <groupId>com.abc.def</groupId>
+                      <artifactId>foo</artifactId>
+                      <scope>test</scope>
+             </dependency>
 
     </dependencies>
 
