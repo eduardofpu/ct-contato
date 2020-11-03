@@ -1,0 +1,9 @@
+node{
+  stage('SCM Checaout'){
+     git 'https://github.com/eduardofpu/micro-services/new/main/ct-contato'
+   }
+     stage('Compile-Package'){
+      sh 'mvn package'
+   }
+       
+}
