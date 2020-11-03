@@ -269,7 +269,7 @@
                               <xmlOutputDir>${project.build.directory}/surefire</xmlOutputDir>
                           </systemPropertyVariables>
                       </configuration>
-                 </plugin>`
+                 </plugin>
                      
                 <plugin>
                     <groupId>org.bsc.maven</groupId>
