@@ -1,0 +1,29 @@
+spring:
+  profiles:
+    active: ${activatedProperties}
+
+---
+
+spring:
+  profiles: dev
+logging:
+  file: /springLogs/autenticador.log
+  level:
+    org:
+      hibernate:
+        SQL: debug
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} %-5level %msg%n'
+
+---
+
+spring:
+  profiles: prod
+logging:
+  file: E:/java/logs/wildfly-10.0.0/autenticador/autenticador.log
+  level:
+    org:
+      hibernate:
+        SQL: debug
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} %-5level %msg%n'
