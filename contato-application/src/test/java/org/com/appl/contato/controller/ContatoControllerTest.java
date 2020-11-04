@@ -11,6 +11,7 @@ import java.util.List;
 import org.com.api.contato.representation.ContatoBuilder;
 import org.com.api.contato.representation.ContatoReq;
 import org.com.api.contato.representation.ContatoResp;
+import org.com.appl.contato.ContatoApplication;
 import org.com.cmn.contato.exception.internalServerError;
 import org.com.ct.md.contato.entity.Contato;
 import org.com.dm.contato.impl.ContatoDomainImpl;
@@ -32,7 +33,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.MediaType;
-import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -41,10 +41,8 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK, classes = ContatoApplication.class)
 @AutoConfigureMockMvc
-@TestPropertySource(
-        locations = "classpath:application.properties")
 public class ContatoControllerTest {
 
     private final String PATH = "/contato/";
@@ -171,8 +169,8 @@ public class ContatoControllerTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(body))
                 .accept(MediaType.APPLICATION_JSON))
-                .andExpect(MockMvcResultMatchers.status().isCreated())
-                .andDo(print());
+                .andExpect(MockMvcResultMatchers.status().isCreated());
+//                .andDo(print());
     }
 
     @Test
@@ -185,8 +183,8 @@ public class ContatoControllerTest {
                 .content(objectMapper.writeValueAsString(body))
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isAccepted())
-                .andExpect(jsonPath("$.id").value(1))
-                .andDo(print());
+                .andExpect(jsonPath("$.id").value(1));
+//                .andDo(print());
     }
 
     @Test
@@ -202,8 +200,8 @@ public class ContatoControllerTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(body))
                 .accept(MediaType.APPLICATION_JSON))
-                .andExpect(MockMvcResultMatchers.status().isAccepted())
-                .andDo(print());
+                .andExpect(MockMvcResultMatchers.status().isAccepted());
+//                .andDo(print());
     }
 
     @Test
@@ -219,8 +217,8 @@ public class ContatoControllerTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(body))
                 .accept(MediaType.APPLICATION_JSON))
-                .andExpect(MockMvcResultMatchers.status().isAccepted())
-                .andDo(print());
+                .andExpect(MockMvcResultMatchers.status().isAccepted());
+//                .andDo(print());
     }
 
     @Test
