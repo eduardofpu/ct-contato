@@ -116,8 +116,7 @@ public class ContatoControllerTest {
 
         when(mockService.findall(any())).thenReturn(listPage);
 
-        this.mockMvc.perform(MockMvcRequestBuilders.get(LIST).accept(MediaType.APPLICATION_JSON))
-                .andDo(print())
+        this.mockMvc.perform(MockMvcRequestBuilders.get(LIST).accept(MediaType.APPLICATION_JSON))                
                 .andExpect(MockMvcResultMatchers.status().isOk())                
                 .andExpect(jsonPath("$.content").exists())
                 .andExpect(jsonPath("$.content").isEmpty())
@@ -129,9 +128,8 @@ public class ContatoControllerTest {
 
         when(mockService.findall(any())).thenReturn(listPage);
 
-        this.mockMvc.perform(MockMvcRequestBuilders.get(LIST).accept(MediaType.APPLICATION_JSON))                
-                .andExpect(MockMvcResultMatchers.status().isOk())
-                .andDo(print())
+        this.mockMvc.perform(MockMvcRequestBuilders.get(LIST).accept(MediaType.APPLICATION_JSON))             
+                .andExpect(MockMvcResultMatchers.status().isOk())               
                 .andExpect(jsonPath("$.totalElements").value(2));
     }
 
