@@ -150,8 +150,8 @@ public class ContatoControllerTest {
                 .content(objectMapper.writeValueAsString(body))
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isCreated())
-                .andExpect(jsonPath("$.id").value(1))
-                .andDo(print());
+                .andExpect(jsonPath("$.id").value(1));
+ //                .andDo(print());
     }
 
     @Test
