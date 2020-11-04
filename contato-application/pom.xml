@@ -50,6 +50,7 @@
     </dependencies>
     
        <build>
+       <finalName>ct-contato</finalName>         
 
         <!--        Para filtrar os arquivos  profile  -->
         <resources>
