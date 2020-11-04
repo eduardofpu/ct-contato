@@ -28,17 +28,17 @@
             <version>1.0</version>
             <scope>compile</scope>
         </dependency>
-             
+
         <dependency>
-                 <groupId>org.springframework.boot</groupId>
-                 <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>     
-       
-         <dependency>
-             <groupId>org.springframework.boot</groupId>
-             <artifactId>spring-boot-starter-tomcat</artifactId>
-             <scope>compile</scope> 
-         </dependency>      
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>compile</scope>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -48,9 +48,9 @@
 
 
     </dependencies>
-    
-       <build>
-       <finalName>ct-contato</finalName>         
+
+    <build>
+        <finalName>ct-contato</finalName>
 
         <!--        Para filtrar os arquivos  profile  -->
         <resources>
@@ -60,16 +60,20 @@
             </resource>
         </resources>
 
-        <plugins>            
-
+        <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>                
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
-
         </plugins>
 
     </build>
-
 
 </project>
