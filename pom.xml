@@ -138,8 +138,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.16.18</version>
-            <scope>provided</scope>
+            <version>1.16.22</version>
         </dependency>
 
         <!-- Postgres -->
@@ -238,8 +237,18 @@
             </resource>
         </resources>
 
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.bsc.maven</groupId>
+                    <artifactId>confluence-reporting-maven-plugin</artifactId>
+                    <version>5.0</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
         <plugins>
-            
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -250,8 +259,38 @@
                     <forkMode>once</forkMode>
                 </configuration>
 
-            </plugin>                
-           
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>${project.build.java}</source>
+                    <target>${project.build.java}</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.7.7.201606060606</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 
         </plugins>
 
